@@ -1,0 +1,10 @@
+# Ignore all files in the 'Quantum-Langevin-Equation-QIB-Model' directory at the root level
+/Quantum-Langevin-Equation-QIB-Model
+
+# Ignore the 'node_modules' directory and everything within it
+node_modules/
+
+# Ignore specific file names at the root level
+cover-letter.pdf
+cover-letter.tex
+pt-cover-letter.*
