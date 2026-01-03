@@ -1,0 +1,142 @@
+\documentclass[aps,prper,twocolumn,superscriptaddress]{revtex4-2}
+
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{physics}
+%\usepackage[mathlines]{lineno} % mathlines numbers equations too
+
+\begin{document}
+%\linenumbers
+
+\title{Quantum Mechanical Theory of Ghosts}
+
+%\author{Babak Makkinejad}
+%\affiliation{Institutional Affiliation}
+
+\date{\today}
+
+\begin{abstract}
+A fictional system is introduced as a pedagogical device to unify several elementary topics in quantum mechanics within a single worked example. Using standard textbook formulas, we examine de~Broglie wavelength, tunneling, Doppler shift, Compton scattering, and momentum transfer in a consistent, order-of-magnitude framework. No claims are made regarding the physical existence of the system considered.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+This article presents a pedagogical exercise rather than a physical model of a real system. ``Ghosts'' are treated throughout as a fictional construct, introduced solely to unify several elementary topics in quantum mechanics—including the de~Broglie wavelength, tunneling, Doppler shift, Compton scattering, and momentum transfer—within a single worked example. Standard textbook formulas are applied in an internally consistent manner to emphasize order-of-magnitude reasoning and conceptual coherence, without implying any physical reality for the system described.
+
+Within this fictional framework, ghosts are assumed to penetrate closed doors and interior walls with thicknesses of order $0.1~\mathrm{m}$, while remaining confined by substantially thicker exterior walls. For instructional purposes, this behavior is modeled using quantum-mechanical tunneling,\cite{GriffithsQM} requiring an associated de~Broglie wavelength of comparable scale. We further assume that a typical ghost, in the absence of illumination, can attain a velocity of approximately $v = 3000~\mathrm{m\,s^{-1}}$.
+
+\section{Mass of a typical ghost}
+
+Using the de~Broglie relation,\cite{SakuraiQM}
+\begin{equation}
+\lambda = \frac{h}{mv},
+\end{equation}
+the mass is
+\begin{equation}
+m = \frac{h}{\lambda v}.
+\end{equation}
+
+Substituting
+\begin{equation}
+h = 6.626\times10^{-34}~\mathrm{J\,s}, \quad
+\lambda = 0.1~\mathrm{m}, \quad
+v = 3000~\mathrm{m\,s^{-1}},
+\end{equation}
+yields
+\begin{equation}
+m \approx 2.21\times10^{-36}~\mathrm{kg}.
+\end{equation}
+
+This mass is approximately $10^{9}$ times smaller than the electron mass,\cite{HallidayResnick} illustrating why macroscopic tunneling lengths arise in this constructed example.
+
+\section{Kinetic energy}
+
+The kinetic energy is
+\begin{equation}
+K = \frac{1}{2}mv^2 \approx 9.95\times10^{-30}~\mathrm{J}.
+\end{equation}
+
+\section{Tunneling through walls}
+
+For a rectangular potential barrier of thickness $d$, the tunneling probability is approximated by\cite{GriffithsQM}
+\begin{equation}
+T \approx e^{-2\kappa d},
+\end{equation}
+with
+\begin{equation}
+\kappa = \sqrt{\frac{2m(U-E)}{\hbar^2}}.
+\end{equation}
+
+Solving for the barrier height $U$ gives
+\begin{equation}
+U = E + \frac{\hbar^2}{2md^2}\left[\ln\left(\frac{1}{T}\right)\right]^2.
+\end{equation}
+
+For pedagogical simplicity, we consider the high-transmission limit $T\approx1$, yielding $U\approx E$.
+
+\section{Interaction with light}
+
+\subsection{Doppler shift}
+
+For incident light of wavelength $\lambda_0 = 600~\mathrm{nm}$, the relativistic Doppler shift gives
+\begin{equation}
+\lambda' \approx 599.994~\mathrm{nm}.
+\end{equation}
+
+\subsection{Compton scattering}
+
+For backscattering $(\theta = \pi)$, the Compton shift is
+\begin{equation}
+\Delta\lambda = \frac{2h}{mc} \approx 2000~\mathrm{nm},
+\end{equation}
+placing the scattered radiation in the infrared.
+
+\section{Momentum transfer}
+
+The momentum change associated with photon scattering is
+\begin{equation}
+\Delta p \approx 1.36\times10^{-27}~\mathrm{kg\,m\,s^{-1}},
+\end{equation}
+which, when applied relativistically, leads to a final velocity approaching $0.9c$.\cite{LongairHEA}
+
+\section{Discussion}
+
+The exaggerated numerical results obtained here are a direct consequence of the intentionally extreme parameter choices used to illustrate quantum-mechanical principles. The example is intended to provoke discussion, reinforce scaling arguments, and encourage careful examination of assumptions when applying familiar formulas beyond their usual domains.
+
+\begin{acknowledgments}
+The problems presented here are adapted from a homework assignment by the late Professor Karl T. Hect of the University of Michigan in Ann Arbor. The solutions are provided by the author.  The author has no conflicts to disclose.
+\end{acknowledgments}
+
+\begin{thebibliography}{99}
+
+\bibitem{SakuraiQM}
+J.~J.~Sakurai and J.~Napolitano,
+\textit{Modern Quantum Mechanics}, 2nd ed.
+(Addison--Wesley, San Francisco, 2011).
+
+\bibitem{GriffithsQM}
+D.~J.~Griffiths and D.~F.~Schroeter,
+\textit{Introduction to Quantum Mechanics}, 3rd ed.
+(Cambridge University Press, Cambridge, 2018).
+
+\bibitem{HallidayResnick}
+R.~Resnick, D.~Halliday, and K.~S.~Krane,
+\textit{Physics}, 4th ed.
+(Wiley, New York, 1992).
+
+\bibitem{Compton1923}
+A.~H.~Compton,
+``A quantum theory of the scattering of X-rays by light elements,''
+Phys. Rev. \textbf{21}, 483--502 (1923).
+
+\bibitem{LongairHEA}
+M.~S.~Longair,
+\textit{High Energy Astrophysics}, 3rd ed.
+(Cambridge University Press, Cambridge, 2011).
+
+\end{thebibliography}
+
+
+\end{document}

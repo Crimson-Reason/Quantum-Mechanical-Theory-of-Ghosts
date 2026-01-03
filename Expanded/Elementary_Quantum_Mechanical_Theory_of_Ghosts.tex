@@ -1,0 +1,177 @@
+\documentclass[10pt,a4paper]{article} 
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\thepage}
+\lhead{Quantum Mechanical Theory of Ghosts}
+
+\title{\textbf{Quantum Mechanical Theory of Ghosts}}
+\author{Babak Makkinejad}
+\date{December 28, 2025}
+
+\begin{document}
+
+\maketitle
+\begin{abstract}
+A fictional system is introduced as a pedagogical device to unify several elementary topics in quantum mechanics within a single worked example. Using standard textbook formulas, we examine de~Broglie wavelength, tunneling, Doppler shift, Compton scattering, and momentum transfer in a consistent, order-of-magnitude framework. No claims are made regarding the physical existence of the system considered.
+\end{abstract}
+
+\section*{Introduction}
+This article presents a pedagogical exercise rather than a physical model of a real system. “Ghosts” are treated throughout as a fictional construct, introduced solely to unify several elementary topics in quantum mechanics—including the de Broglie wavelength, tunneling, Doppler shift, Compton scattering, and momentum transfer—within a single worked example. Standard textbook formulas are applied in an internally consistent manner to emphasize order-of-magnitude reasoning and conceptual coherence, without implying any physical reality for the system considered.
+
+Within this fictional framework, ghosts are assumed to penetrate closed doors and interior walls with thicknesses of order 0.1 m, while remaining confined by substantially thicker exterior walls. For instructional purposes, this behavior is modeled using quantum-mechanical tunneling \cite{GriffithsQM}, requiring an associated de Broglie wavelength of comparable scale. We further assume that a typical ghost, in the absence of illumination, can attain a velocity of approximately 3000 m $s^{-1}$
+
+.
+
+\vspace{2mm}
+\subsection*{(a) Mass of a Typical Ghost}
+
+Using the de Broglie wavelength formula \cite{SakuraiQM}:
+\begin{align}
+\lambda &= \frac{h}{m v}, \\
+\Rightarrow m &= \frac{h}{\lambda v}.
+\end{align}
+
+Where:
+\begin{itemize}
+    \item $h = 6.626 \times 10^{-34}~\mathrm{J\cdot s}$ \cite{HallidayResnick},
+    \item $\lambda = 0.1~\mathrm{m}$,
+    \item $v = 3000~\mathrm{m/s}$.
+\end{itemize}
+
+\begin{align}
+m &= \frac{6.626 \times 10^{-34}}{0.1 \cdot 3000} \approx 2.21 \times 10^{-36}~\mathrm{kg}.
+\end{align}
+
+This is about 1.3 billion times lighter than an electron \cite{HallidayResnick}, explaining why ghosts can pass through walls via quantum tunneling \cite{GriffithsQM}.
+
+\vspace{2mm}
+\subsection*{(b) Kinetic Energy of a Ghost}
+
+\begin{align}
+KE &= \frac{1}{2} m v^2, \\
+KE &= \frac{1}{2} (2.21 \times 10^{-36}) (3000)^2 \approx 9.945 \times 10^{-30}~\mathrm{J}.
+\end{align}
+
+\vspace{2mm}
+\subsection*{(c) Potential Energy Barrier of a Wall}
+
+Tunneling probability \cite{GriffithsQM}:
+\begin{align}
+T &\approx e^{-2 \kappa d}, &
+\kappa &= \sqrt{\frac{2 m (U - E)}{\hbar^2}} \cite{SakuraiQM}, &
+\hbar &= 1.055 \times 10^{-34}~\mathrm{J\cdot s} \cite{HallidayResnick}.
+\end{align}
+
+Rearranging for $U$:
+\begin{align}
+U &= E + \frac{\hbar^2 (\ln(1/T))^2}{2 m d^2}, \\
+\text{Assuming } T &\approx 1, & U &\approx E \approx 9.945 \times 10^{-30}~\mathrm{J}.
+\end{align}
+
+\vspace{2mm}
+\subsection*{(d) Tunneling Probability Through Thicker Walls}
+
+For $d = 0.3~\mathrm{m}$:
+\begin{align}
+\kappa &= 0, & T &= e^0 = 1.
+\end{align}
+
+\vspace{2mm}
+\subsection*{(e) Wavelength of Reflected Light}
+
+\textbf{Doppler shift} \cite{HallidayResnick}:
+\begin{align}
+\lambda_\mathrm{doppler} &= \lambda_0 \sqrt{\frac{c - v}{c + v}}, \\
+\lambda_\mathrm{doppler} &\approx 600~\mathrm{nm} \cdot \sqrt{\frac{3\times 10^8 - 3000}{3\times 10^8 + 3000}} \approx 599.994~\mathrm{nm}.
+\end{align}
+
+\textbf{Compton scattering} \cite{Compton1923}:
+\begin{align}
+\Delta \lambda &= \frac{h}{m c} (1 - \cos \theta), & \theta = 180^\circ, \\
+\Delta \lambda &\approx \frac{2 h}{m c} \approx 2000~\mathrm{nm}, \\
+\lambda_\mathrm{final} &\approx 600 + 2000 = 2600~\mathrm{nm}.
+\end{align}
+
+\vspace{2mm}
+\subsection*{(f) Final Velocity After Illumination (Relativistic Effects)}
+
+\noindent \textbf{Photon Momenta and Momentum Transfer:}
+\begin{alignat}{2}
+p_\mathrm{photon,in} &= \frac{h}{\lambda_0} &&\approx 1.104 \times 10^{-27}~\mathrm{kg \cdot m/s}, \\
+p_\mathrm{photon,out} &= \frac{h}{\lambda'} &&\approx 2.548 \times 10^{-28}~\mathrm{kg \cdot m/s}, \\
+\Delta p &= p_\mathrm{photon,in} + p_\mathrm{photon,out} &&\approx 1.359 \times 10^{-27}~\mathrm{kg \cdot m/s}.
+\end{alignat}
+
+\noindent \textbf{Ghost Initial Momentum and Relativistic Parameter:}
+\begin{alignat}{3}
+p_\mathrm{ghost,initial} &= m v_0 &&= 2.21 \times 10^{-36} \cdot 3000 &&\approx 6.63 \times 10^{-33}~\mathrm{kg \cdot m/s}, \\
+\beta_\mathrm{initial} &= \frac{v_0}{c} &&\approx 1.0 \times 10^{-5}, \\
+\gamma_\mathrm{initial} &= \frac{1}{\sqrt{1-\beta^2}} &&\approx 1.00000005.
+\end{alignat}
+
+\noindent \textbf{Non-Relativistic Estimate (Invalid):}
+\begin{alignat}{2}
+p_\mathrm{ghost,final} &= p_\mathrm{ghost,initial} + \Delta p &&\approx 1.359 \times 10^{-27}, \\
+v_\mathrm{final,non-rel} &= \frac{p_\mathrm{ghost,final}}{m} &&\approx 6.14 \times 10^8~\mathrm{m/s} > c.
+\end{alignat}
+
+\noindent \textbf{Proper Relativistic Treatment:}
+\begin{alignat}{3}
+E_\mathrm{photon,in} &= \frac{hc}{\lambda_0} &&\approx 3.31 \times 10^{-19}~\mathrm{J}, \\
+E_\mathrm{photon,out} &= \frac{hc}{\lambda'} &&\approx 7.64 \times 10^{-20}~\mathrm{J}, \\
+\Delta E &= E_\mathrm{photon,in} - E_\mathrm{photon,out} &&\approx 2.55 \times 10^{-19}~\mathrm{J}, \\
+E_\mathrm{ghost,initial} &= m c^2 + KE &&\approx 1.989 \times 10^{-19}~\mathrm{J}, \\
+E_\mathrm{ghost,final} &= E_\mathrm{ghost,initial} + \Delta E &&\approx 4.539 \times 10^{-19}~\mathrm{J}, \\
+v_\mathrm{final} &= \frac{p_\mathrm{ghost,final} c^2}{E_\mathrm{ghost,final}} &&\approx 2.69 \times 10^8~\mathrm{m/s} \approx 0.90 c.
+\end{alignat}
+
+\noindent \textbf{Physical Interpretation:}  
+The ghost gains enormous velocity from photon scattering, approaching $0.90c$,\cite{LongairHEA} showing relativistic effects are critical.
+
+\vspace{2mm}
+\subsection*{(g) Lights On or Off?}
+
+\textbf{Answer: Leave lights ON.} Continuous photon bombardment accelerates ghosts to relativistic velocities, allowing them to escape confinement \cite{HallidayResnick}. Darkness allows ghosts to tunnel through walls and remain within buildings.
+\section*{Acknowledgments}
+
+The problems presented in this document are based on a homework assignment by the late Professor Karl T. Hecht of the Physics Department of the University of Michigan in Ann Arbor. The solutions are provided by the author.
+\begin{thebibliography}{99}
+
+\bibitem{SakuraiQM}
+J.~J.~Sakurai and J.~Napolitano,
+\textit{Modern Quantum Mechanics}, 2nd ed.
+(Addison--Wesley, San Francisco, 2011).
+
+\bibitem{GriffithsQM}
+D.~J.~Griffiths and D.~F.~Schroeter,
+\textit{Introduction to Quantum Mechanics}, 3rd ed.
+(Cambridge University Press, Cambridge, 2018).
+
+\bibitem{HallidayResnick}
+R.~Resnick, D.~Halliday, and K.~S.~Krane,
+\textit{Physics}, 4th ed.
+(Wiley, New York, 1992).
+
+\bibitem{Compton1923}
+A.~H.~Compton,
+``A quantum theory of the scattering of X-rays by light elements,''
+Phys. Rev. \textbf{21}, 483--502 (1923).
+
+\bibitem{LongairHEA}
+M.~S.~Longair,
+\textit{High Energy Astrophysics}, 3rd ed.
+(Cambridge University Press, Cambridge, 2011).
+
+\end{thebibliography}
+
+\end{document}
